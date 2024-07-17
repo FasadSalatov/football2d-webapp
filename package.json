@@ -15,16 +15,16 @@
   "types": "./lib/index.d.ts",
   "license": "MIT",
   "type": "module",
-  "scripts": {
-    "start": "webpack serve -c ./webpack.config.preview.mjs --open",
-    "build": "webpack && tsc --emitDeclarationOnly",
-    "lint": "eslint",
-    "test": "jest --passWithNoTests",
-    "check-prettier": "prettier --check ./src",
-    "check-types": "tsc --noEmit",
-    "prepublishOnly": "npm run build",
-    "prepare": "husky install"
-  },
+"scripts": {
+  "start": "NODE_OPTIONS=--openssl-legacy-provider webpack serve -c ./webpack.config.preview.mjs --open",
+  "build": "NODE_OPTIONS=--openssl-legacy-provider webpack && tsc --emitDeclarationOnly",
+  "lint": "eslint",
+  "test": "jest --passWithNoTests",
+  "check-prettier": "prettier --check ./src",
+  "check-types": "tsc --noEmit",
+  "prepublishOnly": "npm run build",
+  "prepare": "husky install"
+},
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
